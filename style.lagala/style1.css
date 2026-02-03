@@ -1,0 +1,108 @@
+*{
+    font-family: candara;
+}
+body{
+    background: linear-gradient(rgba(251, 251, 251, 0.6), rgba(153, 151, 151, 0.6)), url("../images/eleve.jpg");
+}
+footer img{
+    max-height: 80px;
+}
+footer{
+    border-top: 1px solid rgb(170, 170, 170);
+}
+h1 { 
+    color: #000000; 
+    text-align: center; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    padding-bottom: 15px; 
+    border-bottom: 3px solid #049afd; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 3px rgba(240, 3, 3, 0.1); 
+}
+p { 
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    color: #000000; 
+    line-height: 1.6;
+} 
+
+p strong { 
+    color: #241111; 
+    font-weight: bold; 
+    background-color: #ffffff; 
+    padding: 2px 5px; 
+    border-radius: 3px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+} 
+img {
+  display: block; 
+    max-width: 100%; 
+    height: auto; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    border: 5px solid white; 
+    transition: transform 0.3s ease; 
+} 
+h3{
+    color: #139713; 
+    font-size: 1.8rem; 
+    text-align: center; 
+    margin: 25px 0; 
+    padding: 10px; 
+    background-color: #e1dddd, #fbfbfb; 
+    border-radius: 8px; 
+}
+
+ul { 
+    background-color: #fcfcfc; 
+    border-radius: 10px; 
+    padding: 20px 30px; 
+    margin: 20px 0; 
+    list-style-position: inside; 
+    box-shadow: 0 3px 6px rgba(219, 211, 211, 0.1); 
+} 
+
+ul li{
+ font-weight: 600;
+}
+
+
+ul li:hover { 
+    background-color: #eef7ff; 
+    padding-left: 10px; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+} 
+
+a.btn { 
+    display: block; 
+    width: fit-content; 
+    margin: 30px auto; 
+    padding: 15px 40px; 
+    background: linear-gradient(45deg, #197f4f, #197f4f); 
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    border-radius: 50px; 
+    text-align: center; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    border: none; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+} 
+a.btn:hover { 
+    background: linear-gradient(45deg, #206949, #206949); 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(#206949,#206949); 
+} 
+ 
+a.btn:active { 
+    transform: translateY(1px); 
+} 

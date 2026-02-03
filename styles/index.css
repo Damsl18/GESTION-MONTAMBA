@@ -1,0 +1,59 @@
+*{
+    font-family: candara;
+}
+body{
+    background: linear-gradient(rgba(251, 251, 251, 0.6), rgba(153, 151, 151, 0.6)), url("../images/eleve.jpg")
+}
+header img{
+    max-height: 100px;
+}
+footer img{
+    max-height: 80px;
+}
+.banniere{
+    background: linear-gradient(rgba(251, 251, 251, 0.6), rgba(198, 198, 198, 0.6)), url("../images/etudiant.jpg");
+    background-size: 100% auto;
+    background-position: center;
+}
+
+header .navbar a{
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: large;
+    font-family: poppins;
+}
+header .navbar a:hover{
+    background-color: rgb(249, 237, 74);
+}
+
+footer{
+    border-top: 1px solid rgb(170, 170, 170);
+}
+header{
+    background: linear-gradient(45deg, #fef8f8, #e7efa5);
+}
+.banniere{
+    padding: 15px;
+}
+button{
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgb(255, 248, 106);
+    border: solid 1px rgb(204, 204, 204);
+}
+button:hover{
+    background-color: rgb(249, 237, 74);
+}
+.card, .promo{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-8px); 
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12); 
+}
+.promo:hover{
+    transform: translateY(-8px); 
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12); 
+    background-color: #e7efa5;
+}

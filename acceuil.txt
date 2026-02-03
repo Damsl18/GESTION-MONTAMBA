@@ -1,0 +1,254 @@
+<html>7
+STRUCTURE DU SITE WEB DE GESTION DES PAIEMENTS POUR L'ÉCOLE MONT AMBA
+
+1. accueil.html (Page d’accueil)
+Cette page présente le système de paiement ainsi que les dates limites pour le règlement des frais scolaires selon les différentes tranches.
+Elle inclut une barre de navigation avec 5 menus principaux permettant d’accéder aux différentes sections du site.
+L’accueil contiendra également deux ou trois liens rapides, dont :
+//SHAMBA MIKOBI DAVID
+
+Payer les frais – Ce lien redirige vers l’onglet « Se connecter », car le paiement nécessite un compte parent.
+
+À définir – Autre lien à déterminer ultérieurement.
+
+2. seconnecter.html (Page de connexion)
+Un formulaire permet aux parents de se connecter avant d’effectuer un paiement. Les champs requis sont :
+
+Adresse e-mail
+
+Mot de passe
+Si le parent n’a pas encore de compte, un lien « Créer un compte » redirige vers la page d’inscription.
+
+3. creercompte.html (Page d’inscription)
+Formulaire d’inscription pour les parents, avec les champs suivants :
+
+Nom, Post-nom, Prénom
+
+ID de l’élève
+
+Numéro de téléphone
+
+Adresse physique
+
+Adresse e-mail
+
+Nouveau mot de passe et confirmation
+Après validation, un bouton « Se connecter » redirige vers la page de paiement.
+//IMBOTO FONTES HADASSAH pour les pages "se connecter et creer compte"
+
+4. paiement.html (Page de paiement)
+Page sécurisée dédiée au règlement des frais, accessible uniquement après connexion.
+//LETA HORTALVIE
+
+5. commentpayer.html (Page « Comment payer ? »)
+Présente les différentes méthodes de paiement acceptées (mobile money, virement bancaire, paiement en banque, etc.) et inclut un bouton redirigeant vers l’interface de paiement.
+//TSHIBAMBA BOPE GRACE
+
+6. presentation.html (Présentation de l’école)
+Brève présentation de l’établissement : photos des infrastructures, informations sur le corps professoral, etc. 
+// JOYCE AARONNE LOKIATOLO
+
+7. calendrier.html (Calendrier scolaire)
+Affiche le calendrier scolaire détaillé, incluant les périodes de vacances. Des illustrations viendront agrémenter la page.
+//ROUSLANE
+
+8. actualite.html (Page d’actualités)
+Espace dédié aux nouvelles de l’école : activités, projets, annonces importantes, etc.
+//KAVIRA TCHAKUNO DEBORAH
+
+9. evenements.html (Page des événements parascolaires)
+Recense les activités parascolaires proposées, avec leurs frais associés. Un lien permet d’accéder à un formulaire de paiement spécifique (nécessite une connexion au compte parent).
+//LAGALA MANASSE
+
+10. listeeleves.html (Liste des élèves)
+Tableau présentant les élèves inscrits, leur classe et l’état de leur paiement des frais scolaires (à jour ou en retard). Cette page permet aux parents de vérifier la situation de leur enfant.
+on pourra créer des sections où chaque session représente une promotion, et ainsi de suite, afin de resctructurer un peu cette partie là
+// MAVOKA MAYAKASA
+</html>
+<div class="container">
+    <div class="logo">ÉCOLE MONT AMBA</div>
+    <h2>Paiement sécurisé</h2>
+    <p class="subtitle">Veuillez renseigner correctement les informations du paiement</p>
+
+    <form id="paymentForm" novalidate>
+      <label for="id">ID de l’élève</label>
+      <input type="text" id="id" name="id" placeholder="Ex: 2026-001" required>
+      <div class="error-text" id="idError">Veuillez saisir un ID valide.</div>
+
+      <label for="classe">Classe</label>
+      <input type="text" id="classe" name="classe" placeholder="Ex: 3ème Scientifique" required>
+      <div class="error-text" id="classeError">Veuillez saisir la classe.</div>
+
+      <label for="reference">Numéro de référence</label>
+      <input type="text" id="reference" name="reference" placeholder="HLN-2026-150520" required>
+      <div class="error-text" id="referenceError">Numéro de référence requis.</div>
+
+      <label for="banque">Banque</label>
+      <select id="banque" name="banque" required>
+        <option value="">--Sélectionnez--</option>
+        <option value="rawbank">Rawbank</option>
+        <option value="equity">Equity</option>
+        
+        
+      </select>
+      <div class="error-text" id="banqueError">Veuillez sélectionner une banque.</div>
+
+      <label for="transaction">Numéro de transaction du bordereau</label>
+      <input type="text" id="transaction" name="transaction" placeholder="Ex: TRX895746" required>
+      <div class="error-text" id="transactionError">Numéro de transaction requis.</div>
+
+      <label for="montant">Montant à payer </label>
+      <input type="number" id="montant" name="montant" min="1" placeholder="Entrez le montant" required>
+      <div class="error-text" id="montantError">Le montant doit être supérieur à 0.</div>
+      <label for="devise">Devise </label>
+         <select id="devise" name="devise" required>
+            <option value="">--Sélectionnez--</option>
+            <option value="usd">USD</option>
+            <option value="cdf">CDF</option>
+        </select>      
+
+      <label for="motif">Motif du paiement</label>
+      <select id="motif" name="motif" required>
+        <option value="">--Sélectionnez le motif--</option>
+        <option value="frais_scolarite">Frais de scolarité</option>
+        <option value="frais_inscription">Frais d’inscription</option>
+        <option value="frais_examen">Frais d’examen</option>
+        <option value="transport">Transport scolaire</option>
+        <option value="cantine">Cantine</option>
+      </select>
+      <div class="error-text" id="motifError">Veuillez sélectionner le motif du paiement.</div>
+
+      <label for="moyen">Moyen de paiement</label>
+      <select id="moyen" name="moyen" required>
+        <option value="">--Sélectionnez--</option>
+        <option value="orange_money">Orange Money</option>
+        <option value="airtel_money">Airtel Money</option>
+        <option value="mpsa">M-Pesa</option>
+        <option value="afri_money">Afri Money</option>
+        <option value="rawbank">Rawbank</option>
+        <option value="equity">Equity</option>
+      </select>
+      <div class="error-text" id="moyenError">Veuillez choisir un moyen de paiement.</div>
+
+      <button type="submit">Valider le paiement</button>
+      <div class="message" id="formMessage"></div>
+    
+    </form>
+  </div>
+
+  <!-- MODAL RÉSUMÉ DU PAIEMENT -->
+  <div id="resumeOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(3px);align-items:center;justify-content:center;z-index:9999;">
+    <div style="background:#fff;border-radius:14px;width:420px;padding:24px 22px;box-shadow:0 25px 50px rgba(0,0,0,.2);">
+      <h3 style="text-align:center;color:#1a2e4b;margin-bottom:10px;">Résumé du paiement</h3>
+      <p style="text-align:center;color:#667;margin-bottom:16px;font-size:0.9rem">Veuillez vérifier les informations avant validation définitive</p>
+
+      <div style="font-size:0.95rem;color:#233;line-height:1.6">
+        <p><strong>ID Élève :</strong> <span id="r_id"></span></p>
+        <p><strong>Classe :</strong> <span id="r_classe"></span></p>
+        <p><strong>Référence :</strong> <span id="r_reference"></span></p>
+        <p><strong>Banque :</strong> <span id="r_banque"></span></p>
+        <p><strong>Transaction :</strong> <span id="r_transaction"></span></p>
+        <p><strong>Motif :</strong> <span id="r_motif"></span></p>
+        <p><strong>Montant :</strong> $<span id="r_montant"></span></p>
+        <p><strong>Moyen de paiement :</strong> <span id="r_moyen"></span></p>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:18px;">
+        <button id="cancelResume" style="flex:1;padding:10px;border-radius:10px;border:none;background:#bdc3c7;font-weight:600;cursor:pointer">Modifier</button>
+        <button id="confirmResume" style="flex:1;padding:10px;border-radius:10px;border:none;background:#244f9e;color:#fff;font-weight:600;cursor:pointer">Confirmer</button>
+      </div>
+    </div>
+  </div>
+    <footer class="footer mt-auto py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 col-lg-3 mb-3 mb-md-0 text-center text-md-start">
+                    <img src="./images/logo-removebg-preview.png" class="img-fluid" alt="ici logo">
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 text-center mb-md-0 text-md-start">
+                    <span class="text-muted">&copy; 2026 ~ Groupe Scolaire Mont-Amba</span><br>
+                    <span class="text-muted">SHAMBA MIKOBI David, chef de Groupe</span>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 text-center text-md-end">
+                    <a href="#" class="text-muted me-3">Mentions légales</a>
+                    <a href="#" class="text-muted me-3">Politique de conidentialité</a>
+                    <a href="https://wa.me/+243842555645" target="_blank" class="text-muted">Contact </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./styles/bootstrap.bundle.min.js"></script>
+    <script src="./styles/bootstrap.bundle.min.js">
+    const form = document.getElementById('paymentForm');
+
+    function showError(inputId, errorId, condition) {
+      const error = document.getElementById(errorId);
+      if (condition) {
+        error.style.display = 'block';
+        return true;
+      } else {
+        error.style.display = 'none';
+        return false;
+      }
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let hasError = false;
+
+      hasError |= showError('code', 'codeError', document.getElementById('code').value.trim().length < 4);
+      hasError |= showError('id', 'idError', document.getElementById('id').value.trim() === '');
+      hasError |= showError('classe', 'classeError', document.getElementById('classe').value.trim() === '');
+      hasError |= showError('reference', 'referenceError', document.getElementById('reference').value.trim() === '');
+      hasError |= showError('banque', 'banqueError', document.getElementById('banque').value === '');
+      hasError |= showError('transaction', 'transactionError', document.getElementById('transaction').value.trim() === '');
+
+      const montant = Number(document.getElementById('montant').value);
+      hasError |= showError('montant', 'montantError', isNaN(montant) || montant <= 0);
+
+      hasError |= showError('moyen', 'moyenError', document.getElementById('moyen').value === '');
+      hasError |= showError('motif', 'motifError', document.getElementById('motif').value === '');
+
+      const message = document.getElementById('formMessage');
+
+      if (hasError) {
+        message.style.display = 'block';
+        message.className = 'message danger';
+        message.textContent = 'Veuillez corriger les erreurs avant de continuer.';
+        return;
+      }
+
+      // ------------------ AFFICHAGE DU RÉSUMÉ ------------------
+      document.getElementById('r_id').textContent = document.getElementById('id').value;
+      document.getElementById('r_classe').textContent = document.getElementById('classe').value;
+      document.getElementById('r_reference').textContent = document.getElementById('reference').value;
+      document.getElementById('r_banque').textContent = document.getElementById('banque').options[banque.selectedIndex].text;
+      document.getElementById('r_transaction').textContent = document.getElementById('transaction').value;
+      document.getElementById('r_motif').textContent = document.getElementById('motif').options[motif.selectedIndex].text;
+      document.getElementById('r_montant').textContent = document.getElementById('montant').value;
+      document.getElementById('r_moyen').textContent = document.getElementById('moyen').options[moyen.selectedIndex].text;
+
+      document.getElementById('resumeOverlay').style.display = 'flex';
+    });
+
+    document.getElementById('cancelResume').addEventListener('click', () => {
+      document.getElementById('resumeOverlay').style.display = 'none';
+    });
+
+    document.getElementById('confirmResume').addEventListener('click', () => {
+      document.getElementById('resumeOverlay').style.display = 'none';
+
+      const message = document.getElementById('formMessage');
+      message.style.display = 'block';
+      message.className = 'message success';
+      message.textContent = 'Paiement validé avec succès ✔ (simulation)';
+
+      // 👉 Ici tu peux envoyer définitivement au backend
+      // const data = new FormData(form);
+      // fetch('traitement.php', { method: 'POST', body: data });
+    });
+  </script>
+
+</body>
+</html>
