@@ -26,6 +26,10 @@ header .navbar a{
 header .navbar a:hover{
     background-color: rgb(249, 237, 74);
 }
+header .navbar a.active{
+    color: rgb(249, 237, 74);
+    background-color: rgba(249, 237, 74, 0.2);
+}
 
 footer{
     border-top: 1px solid rgb(170, 170, 170);
